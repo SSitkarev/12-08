@@ -52,14 +52,14 @@
 
 Для создания инкрементных бэкапов MySQL удобнее всего использовать утилиту XtraBackup
 
-Пример инкрементного бэкапа на основе полного:
+- Пример инкрементного бэкапа на основе полного:
 
-xtrabackup --backup --target-dir=/root/backupdb/inc1 --incremental-basedir=/root/backupdb/full
+**xtrabackup --backup --target-dir=/root/backupdb/inc1 --incremental-basedir=/root/backupdb/full**
 
-Пример инкрементного бэкапа на основе предыдущего инкрементного:
+- Пример инкрементного бэкапа на основе предыдущего инкрементного:
 
-xtrabackup --backup --target-dir=/root/backupdb/inc2 --incremental-basedir=/root/backupdb/inc1
+**xtrabackup --backup --target-dir=/root/backupdb/inc2 --incremental-basedir=/root/backupdb/inc1**
 
-Для восстановления используется слудующая команда:
+- Для восстановления используется слудующая команда:
 
-xtrabackup --decompress --target-dir=/root/backupdb/inc2
+**xtrabackup --decompress --target-dir=/root/backupdb/inc2**
